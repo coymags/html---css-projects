@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+        <meta charset="utf-8">
+        <style>.name{padding-left: 50px;}</style>
+        <style>.radio{padding-left: 100px;}</style>
+        <style>.topics{padding-left: 70px;}</style>
+        <style>.final{padding-left: 180px;}</style>
+    </head>
+    <body>
+        <h1>Employee Interests Survey form</h1>
+        <form action="example.htm">
+        <div class="name">
+            <form action="example.htm" method="get" >
+                <label for="fname">Enter your name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+            </form>
+        </div>
+        <form action="example.htm" method="get" id="depform">
+            <label for="department">Enter your department:</label>
+            <input type="text" id="department" name="department"><br>
+        </form>
+            <p>Tell us a little about yourself:<textarea name="comment" form="depform"></textarea></p>
+            <div class="radio">
+                <p>Do you exercise at home?
+                <input type="radio" id="ask" name="exercise" value="yes">
+                <label for="ask">Yes</label>
+                <input type="radio" id="html" name="exercise" value="no">
+                <label for="ask">No</label>
+                </p>
+            </div>
+        <p class="topics">How do you like to read about your favorite topics?</p>
+            <p class="name">
+            <input type="checkbox" id="blog1" name="blog1" value="books">
+            <label for="blog1">Books</label>
+            <input type="checkbox" id="blog2" name="blog2" value="online resources">
+            <label for="blog2">Online resources</label>
+            <input type="checkbox" id="blog3" name="blog3" value="phone apps">
+            <label for="blog3">Phone apps</label>
+            <input type="checkbox" id="blog4" name="blog4" value="Magazines">
+            <label for="blog4">Magazines</label>
+            </p>
+            <p class="final"><input type="submit" value="Submit"></p>
+        </form>
+    </body>
+</html>
