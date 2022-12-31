@@ -1,0 +1,377 @@
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Hamburger navigation bar*/
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    position: sticky;
+    top: 0;
+}
+
+.portfolio{
+    font-size: 2rem;
+    margin: .5rem;
+    color: crimson;
+}
+
+.navmenu ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navmenu ul li{
+    list-style: none;
+}
+
+.navmenu ul li a{
+    text-decoration: none;
+    color: blueviolet;
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.navigation ul li a:hover{
+    font-weight:bold;
+    text-shadow: 0 0 5px violet;
+}
+
+.menu{
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    display: none;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+@media (max-width:600px){
+    .menu{
+        display: flex;
+    }
+
+    .navmenu ul{
+        display: none;
+        width: 100%;
+    }
+
+    .navigation{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navmenu ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navmenu ul li a{
+        padding: .2rem .2rem;
+    }
+
+    .navmenu.active ul{
+        display: block;
+    }
+}
+
+
+
+
+
+/*Home and I'am page*/
+#homepage{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#homepage::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background:url("workana.jpg") no-repeat center center/cover ;
+    height: 700px;
+    width: 100%;
+    z-index: -1;
+}
+
+.hiam{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+}
+
+span{
+    color: crimson;
+}
+
+.CV:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    box-shadow: 0 0 10px dodgerblue;
+}
+
+
+/* About me page*/
+#aboutme{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: gray;
+    padding: 20px;
+    
+}
+
+.navabout{
+    display: flex;
+    justify-content: center;
+
+}
+
+.myself{
+    display: flex;
+}
+
+.myself img{
+    max-width: 450px;
+    max-height: 400px;
+}
+
+.thatsme{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+
+/* Skills Page*/
+#skills{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: white;
+    min-height: 700px;
+    width: 100%;
+}
+
+#skills h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+#skills h3{
+    text-align: center;
+    margin: 5px;
+}
+
+#skills li{
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.bar{
+    background-color: #696969;
+    display: block;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.python{
+    width: 50%;
+    display: block;
+    height: 20px;
+    border-radius: 10px;
+    animation-name: python;
+    animation-duration: 3s;
+    background-color: crimson;
+}
+
+.html{
+    width: 40%;
+    display: block;
+    height: 20px;
+    border-radius: 10px;
+    animation-name: html;
+    animation-duration: 3s;
+    background-color: crimson;
+}
+
+.css{
+    width: 40%;
+    display: block;
+    height: 20px;
+    border-radius: 10px;
+    animation-name: css;
+    animation-duration: 3s;
+    background-color: crimson;
+}
+
+.javascript{
+    width: 20%;
+    display: block;
+    height: 20px;
+    border-radius: 10px;
+    animation-name: javascript;
+    animation-duration: 3s;
+    background-color: crimson;
+}
+
+@keyframes python {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    } 
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    } 
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    } 
+}
+@keyframes javascript {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 20%;
+    } 
+}
+
+
+/* Gallery page*/
+#gallery{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 700px;
+    background: black;
+}
+
+#gallery .galleryhead{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    height: 150px;
+    padding-top: 35px;
+}
+
+.firstrow{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.firstrow img{
+    width: 250px;
+    height: 150px;
+    padding: 5px;
+    filter: brightness(10%);
+}
+
+.firstrow img:hover{
+    filter:brightness(100%);
+    transform: scale(1.1);
+}
+
+
+/* Contacts page*/
+#contacts{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 700px;
+    background: black;
+}
+
+#contacts .info h1{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 50px;
+}
+
+.callme{
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+.icons{
+    background-color: white;
+    padding: 0 10px;
+    margin: 0 10px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 10%;
+}
+
+.card-icon{
+    font-size: 30px;
+}
+
+.icons:hover .card-icon{
+    font-size: 50px;
+}
+
+@media(max-width:512px){
+    .callme{
+        flex-direction: column;
+    }
+
+    .icons{
+        width: 100%;
+        max-width: 200px;
+        margin: 10px 0;
+    }
+}
+
